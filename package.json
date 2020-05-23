@@ -1,0 +1,28 @@
+{
+  "name": "shortcutbox",
+  "version": "1.0.0-alpha",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron src/index.js",
+    "test": "electron src/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustVice/shortcutbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustVice/shortcutbox/issues"
+  },
+  "homepage": "https://github.com/JustVice/shortcutbox#readme",
+  "devDependencies": {
+    "electron": "^9.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "nedb": "^1.8.0"
+  }
+}

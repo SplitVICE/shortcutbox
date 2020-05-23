@@ -1,0 +1,1 @@
+// Shortcuts are the holders of the paths to open elements.

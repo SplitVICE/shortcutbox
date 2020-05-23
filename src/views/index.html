@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcut Box</title>
+</head>
+
+<body>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+
+    <h1>Shortcut box - work in progress</h1>
+
+    <p>Selected box</p>
+    <select name="" id="">
+        <option value="">Box 1</option>
+        <option value="">Box 2</option>
+        <option value="">Box 3</option>
+        <option value="">Box 4</option>
+    </select>
+
+    <p>Box description:</p>
+    <p>Open all desktop folder and notepad</p>
+    <p>Shortcuts:</p>
+
+    <table style="width:100%">
+        <tr>
+            <th>Shortcut type</th>
+            <th colspan="2">Opens</th>
+        </tr>
+        <tr>
+            <td>Open folder</td>
+            <td>Desktop folder</td>
+        </tr>
+        <tr>
+            <td>Open Application</td>
+            <td>Notepad++</td>
+        </tr>
+    </table>
+    <br>
+    <button id="btnExecuteBox">Execute box</button>
+
+    <script>
+        const btnExecuteBox = document.getElementById('btnExecuteBox');
+        btnExecuteBox.addEventListener('click', e => {
+            //const { ipcRenderer } = require('electron');
+            alert('Execute box');
+            // Send instruction to MainProcess.
+        });
+    </script>
+
+</body>
+
+</html>
