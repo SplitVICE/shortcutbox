@@ -1,0 +1,27 @@
+{
+    "userData": { "Stores userdata info."
+        "userName": "stores user's username.",
+        "firstTimeLaunchingApp": "stores if it's the first time the user has opened the program.",
+        "userHasSeenTutorial": "stores if the user has seen the tutorial.",
+        "startAppAt": "stores what window will be displayed when the user opens the program again."
+    },
+    "box": [ "Array that stores box objects. Boxes are profiles to categorize shotcuts."
+        {
+            "boxId": "ID of this box object.",
+            "boxName": "Name of the box. Will be displayed to the user as the profile that holds their shortcuts.",
+            "description": "Description of this box.",
+            "favorite": "stores if the user has marked this box as favorite."
+        }
+    ],
+    "shortcut": [ "Array that stores shortcut objects. Shortcuts are objects that hold all the information neccesay to make shortcuts work correctly."
+        {
+            "shortcutId": "ID of this shortcut object.",
+            "boxId": "ID of the box that this shortcuts is related to.",
+            "diskDrive": "Disk drive where the application or folder is located. If not needed, it will be marked with n/a. It's needed to know what disk holds the application or folder to be able to change from disk drive at terminal.",
+            "shortcutName": "The name of this shortcut.",
+            "shortcutDescription": "The description of this shortcut.",
+            "shortcutUri": "Path or route to find the folder or application. If URL, it will be held here as well.",
+            "shortcutType": "Depending of what kind of element will be opened, terminal will use different commands. Here will be held the time of element to open. The types of shortcut are: application, directory & browserUrl."
+        }
+    ]
+}
