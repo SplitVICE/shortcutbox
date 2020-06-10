@@ -1,0 +1,27 @@
+.aside{
+    float: left;
+    background: greenyellow;
+    padding-right: 25px;
+    margin-right: 40px;
+}
+
+.title{
+    background: lightblue;
+}
+
+#mainContent{
+    margin:0 auto;
+    max-width:1020px;
+    background: lightblue;
+}
+
+footer{
+    margin:0 auto;
+    max-width:1020px;
+    background: lightblue;
+}
+
+.titleVersion{
+    font-size: 16px;
+    color: gray;
+}

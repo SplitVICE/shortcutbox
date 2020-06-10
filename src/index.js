@@ -1,6 +1,6 @@
 const { app, BrowserWindow, Menu, icpMain } = require('electron');
 
-const run = require("./scripts/logic/run.js");
+const tasks = require("./scripts/logic/tasks.js");
 
 app.allowRendererProcessReuse = true;
 
@@ -16,7 +16,7 @@ console.log(developerModeMessage);
 
 let mainWindow;
 
-const mainHTML = "./views/index.html";
+const mainHTML = "./views/home/index.html";
 
 function createRendererProcessWindow_mainWindow(htmlURI) {
     mainWindow = new BrowserWindow({

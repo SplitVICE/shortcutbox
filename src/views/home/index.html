@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../scripts/logic/ajax.js"></script>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <title>Shortcut Box</title>
+</head>
+
+<body>
+    <div id="vue-app">
+
+        <h1 class="title">
+            {{ title }}
+            <span class="titleVersion">{{ version }}</span>
+        </h1>
+
+        <div id="aside-navigator" class="aside"></div>
+
+        <div id="mainContent">
+
+            <p>Here must be content...</p>
+
+        </div>
+
+        <footer>
+            Shortcut box - VICE - © MIT
+        </footer>
+    </div>
+</body>
+<script>
+    AJAX('aside-navigator', '../aside/index.html')
+    AJAX('mainContent', './content.html')
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+
+</html>
