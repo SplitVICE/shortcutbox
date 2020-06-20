@@ -1,8 +1,8 @@
-const run = require("./scripts/logic/run.js");
+const tasksBackend = require("./scripts/logic/tasksBackend.js");
 
 // Working
-console.log(run.generateObjectID('S'));
-console.log(run.generateObjectID('S'));
-console.log(run.generateObjectID('S'));
-console.log(run.generateObjectID('S'));
-console.log(run.generateObjectID('S')); 
+console.log(tasksBackend.generateObjectID('S'));
+console.log(tasksBackend.generateObjectID('S'));
+console.log(tasksBackend.generateObjectID('S'));
+console.log(tasksBackend.generateObjectID('S'));
+console.log(tasksBackend.generateObjectID('S')); 

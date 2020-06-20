@@ -1,6 +1,6 @@
 const { app, BrowserWindow, Menu, icpMain } = require('electron');
 
-const tasks = require("./scripts/logic/tasks.js");
+const tasks = require("./scripts/logic/tasksBackend.js");
 
 app.allowRendererProcessReuse = true;
 

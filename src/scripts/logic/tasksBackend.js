@@ -1,6 +1,11 @@
-const Run = {};
+const tasksBackend = {};
 
-// Generates Boxes and Shortcuts objects IDs.
+/**
+ * Generates objects IDs.
+ * Example of a generated objectID with "S" prefix: S6558e19262
+ * @param prefix The prefix will be placed at the beginning of the
+ * return statement.
+ */
 function generateObjectID(prefix) {
 
     let prefix_result = "";
@@ -21,5 +26,5 @@ function generateObjectID(prefix) {
     return "" + prefix_result + firstNumberBlock + vocalSelection_result + secondNumberBlock;
 }
 
-Run.generateObjectID = generateObjectID;
-module.exports = Run;
+tasksBackend.generateObjectID = generateObjectID;
+module.exports = tasksBackend;
