@@ -2,7 +2,10 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const url = require('url');
 const path = require('path');
 require('dotenv').config();
-const data = require('./data');
+const data_empty = require('./data');
+const data_conf = require('./config/database');
+const data_controller = require('./data.controller');
+const data_path = path.join(data_conf.database_path + '/' + data_conf.database_name);
 
 /**
  * -------------------------------
@@ -15,11 +18,11 @@ ipcMain.handle('execute_executable', (e, args) => {
     execute_elements.execute_executable(args);
 })
 
-ipcMain.handle('execute_folder', (e, args) =>{
+ipcMain.handle('execute_folder', (e, args) => {
     execute_elements.execute_folder(args);
 })
 
-ipcMain.handle('execute_url', (e, args) =>{
+ipcMain.handle('execute_url', (e, args) => {
     execute_elements.execute_url(args);
 })
 
@@ -30,12 +33,22 @@ ipcMain.handle('execute_url', (e, args) =>{
  * -------------------------------
  */
 
-ipcMain.on('data_request_fromRenderer', (e, args) =>{
-    mainWindow.webContents.send('data_request_fromMain', data);
+ipcMain.on('data_request_fromRenderer', (e, args) => {
+    let data_sending = undefined;
+    const data_exists = data_controller.database_exists(data_path);
+    if (data_exists)
+        data_sending = data_controller.loadData(data_path);
+    else
+        data_sending = data_empty;
+    mainWindow.webContents.send('data_request_fromMain', data_sending);
 })
 
-ipcMain.on('save_newBox', (e,args) =>{
-
+/**
+ * Updates database with given data.
+ * args object is database reflected JSON data.
+ */
+ipcMain.handle('save_database', (e, args) => {
+    data_controller.saveData(data_path, args);
 })
 
 /**
@@ -47,7 +60,7 @@ ipcMain.on('save_newBox', (e,args) =>{
 const mainHTML = "./frontend/index.html";
 let mainWindow;
 
-function createRendererProcessWindow_mainWindow(htmlURI) {
+function createRendererProcessWindow_mainWindow(mainHTML) {
     mainWindow = new BrowserWindow({
         webPreferences: {
             nodeIntegration: true
@@ -58,7 +71,7 @@ function createRendererProcessWindow_mainWindow(htmlURI) {
         width: 900
     });
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, htmlURI),
+        pathname: path.join(__dirname, mainHTML),
         protocol: 'file',
         slashes: true
     }));

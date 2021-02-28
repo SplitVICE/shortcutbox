@@ -1,4 +1,3 @@
-var assert = require('assert');
 const tasksBackend = require("../scripts/tasks");
 const database = require('../config/database');
 const path = require('path');

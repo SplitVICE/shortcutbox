@@ -14,4 +14,5 @@ document.getElementById('btn_aside_about').addEventListener('click', () => {
     render_about();
 });
 
+// Default init screen
 render_home();

@@ -2,7 +2,8 @@ const content_dynamic = document.getElementById('content_dynamic');
 
 /**
  * Generates objects IDs.
- * Example of a generated objectID with "S" prefix: S6558e19262
+ * Example of a generated objectID with "S" prefix: S6558e19262. This function can also
+ * be found in main process side.
  * @param prefix The prefix will be placed at the beginning of the generated ID.
  */
 function generateObjectID(prefix) {
