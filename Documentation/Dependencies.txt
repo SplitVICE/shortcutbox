@@ -1,0 +1,9 @@
+Production dependencies
+|-dotenv: to handle environment variables.
+|-electron: ElectronJS API modules.
+|-nedb: json database ODM.
+
+Developer dependencies
+|-mocha: unit testing framework.
+
+npm i dotenv electron && npm i mocha -D

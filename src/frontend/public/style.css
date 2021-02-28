@@ -1,0 +1,8 @@
+aside{
+    float: left;
+}
+
+.content_dynamic{
+    margin-left: 140px;
+    max-width: 800px;
+}

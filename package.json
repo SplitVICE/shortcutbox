@@ -1,28 +1,36 @@
 {
   "name": "shortcutbox",
-  "version": "1.0.0-alpha",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0-dev",
+  "description": "An application to open other applications quickly.",
+  "main": "./src/index.js",
   "scripts": {
     "start": "electron src/index.js",
-    "test": "electron src/tests.js"
+    "test_general": "mocha ./src/test/general.js",
+    "test_db": "mocha ./src/test/db.js",
+    "test_all": "mocha ./src/test/*.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JustVice/shortcutbox.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "shortcutbox",
+    "vice",
+    "just vice",
+    "justvice",
+    "shortcut box"
+  ],
+  "author": "VICE",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JustVice/shortcutbox/issues"
   },
   "homepage": "https://github.com/JustVice/shortcutbox#readme",
-  "devDependencies": {
-    "electron": "^9.0.0"
-  },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "nedb": "^1.8.0"
+    "electron": "^9.4.3"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.0"
   }
 }

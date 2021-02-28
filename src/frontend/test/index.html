@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcut Box</title>
+</head>
+
+<body>
+    <h1 class="title">
+        Shortcut Box
+        <span class="titleVersion">TEST ROOM</span>
+    </h1>
+
+    <h1>Test file execution</h1>
+
+    <button id='open_notepad_c'>Open Notepad++</button>
+    <button id='open_batfile_c'>Open .bat</button>
+    <button id='open_folder_c'>Open folder</button>
+    <button id='open_url'>Open url</button>
+
+    <script>
+        const { ipcRenderer } = require('electron')
+
+        let notepad = 'E:\\Programas\\Notepad++\\notepad++.exe',
+            batfile = 'C:\\Users\\VICE\\Desktop\\file.bat',
+            folder = 'C:\\Users\\VICE\\Desktop\\folder',
+            url = 'www.google.com';
+
+        document.getElementById('open_notepad_c').addEventListener('click', () => {
+            const args = { disk: 'c', path: notepad }
+            ipcRenderer.invoke('execute_executable', args)
+        });
+
+        document.getElementById('open_batfile_c').addEventListener('click', () => {
+            const args = { disk: 'e', path: batfile }
+            ipcRenderer.invoke('execute_executable', args)
+        });
+
+        document.getElementById('open_folder_c').addEventListener('click', () => {
+            const args = { disk: 'c', path: folder, delay: 2000 }
+            ipcRenderer.invoke('execute_folder', args)
+        });
+
+        document.getElementById('open_url').addEventListener('click', () => {
+            const args = { path: url, delay: 1000 }
+            ipcRenderer.invoke('execute_url', args)
+        });
+
+    </script>
+
+    <footer>
+        Shortcut Box by JUST VICE - © MIT
+    </footer>
+</body>
+
+</html>

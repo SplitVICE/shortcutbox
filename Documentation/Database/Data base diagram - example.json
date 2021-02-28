@@ -1,0 +1,51 @@
+{
+    "userData": {
+        "userName": "VICE",
+        "firstTimeLaunchingApp": false,
+        "userHasSeenTutorial": false,
+        "startAppAt": "home"
+    },
+    "box": [
+        {
+            "boxId": "B92883E39293",
+            "boxName": "Drawing programs",
+            "description": "Shortcuts to start drawing :>",
+            "favorite": true
+        }
+    ],
+    "shortcut": [
+        {
+            "shortcutId": "S82948B91839",
+            "boxId": "B92883E39293",
+            "diskDrive": "c",
+            "shortcutName": "Fire Alpaca",
+            "shortcutDescription": "My favorite drawing program!",
+            "shortcutUri": "C:\\FireAlpaca\\FireAlpaca.exe",
+            "shortcutType": "executable",
+            "delayToOpen": 0,
+			"execute": true
+        },
+        {
+            "shortcutId": "S92019F82912",
+            "boxId": "B92883E39293",
+            "diskDrive": "c",
+            "shortcutName": "Fire Alpaca folder",
+            "shortcutDescription": "Folder where I also keep my references.",
+            "shortcutUri": "C:\\FireAlpaca\\",
+            "shortcutType": "directory",
+            "delayToOpen": 0,
+			"execute": true
+        },
+        {
+            "shortcutId": "S88292U99182",
+            "boxId": "B92883E39293",
+            "diskDrive": "n/a",
+            "shortcutName": "Lofi hip hop radio ^o^",
+            "shortcutDescription": "Relax uwu",
+            "shortcutUri": "https://youtu.be/5qap5aO4i9A",
+            "shortcutType": "browserUrl",
+            "delayToOpen": 5000,
+			"execute": true
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+Electron.js Aplicaciones de Escritorio con HTML, Javascript y Node
+https://youtu.be/0BWzZ6c8z-g
+
+Electron documentation
+https://www.electronjs.org/docs
+
+What is the JavaScript version of sleep()?
+https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+
+How to check if a file exists in Node.js
+https://flaviocopes.com/how-to-check-if-file-exists-node/
+
+Node.js | fs.write() Method
+https://www.geeksforgeeks.org/node-js-fs-write-method/
+
+JSON.stringify() - JavaScript object to Json
+https://www.w3schools.com/js/js_json_stringify.asp

@@ -1,0 +1,2 @@
+Box elements ID must start with "B".
+Shortcut elements ID must start with "S".
