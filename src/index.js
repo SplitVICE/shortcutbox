@@ -1,10 +1,11 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
-const url = require('url');
-const path = require('path');
 require('dotenv').config();
-const data_empty = require('./data');
-const data_conf = require('./config/database');
-const data_controller = require('./data.controller');
+const { app, BrowserWindow, ipcMain } = require('electron');
+const url =                             require('url');
+const path =                            require('path');
+const data_empty =                      require('./data');
+const data_conf =                       require('./config/database');
+const data_controller =                 require('./data.controller');
+const execute_elements =                require('./scripts/executeElements');
 const data_path = path.join(data_conf.database_path + '/' + data_conf.database_name);
 
 /**
@@ -12,7 +13,7 @@ const data_path = path.join(data_conf.database_path + '/' + data_conf.database_n
  * ipcMain execute_x handlers.
  * -------------------------------
  */
-const execute_elements = require('./scripts/executeElements');
+
 
 ipcMain.handle('execute_executable', (e, args) => {
     execute_elements.execute_executable(args);
@@ -65,15 +66,15 @@ function createRendererProcessWindow_mainWindow(mainHTML) {
         webPreferences: {
             nodeIntegration: true
         },
-        minHeight: 500,
-        minWidth: 1000,
-        height: 700,
-        width: 900
+        minHeight:  500,
+        minWidth:   1000,
+        height:     700,
+        width:      900
     });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, mainHTML),
         protocol: 'file',
-        slashes: true
+        slashes:  true
     }));
     mainWindow.webContents.openDevTools()
 }

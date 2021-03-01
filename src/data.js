@@ -8,10 +8,10 @@
 
 module.exports = {
     userData: {
-        userName: "Masked anonymous",
-        firstTimeLaunchingApp: false,
-        userHasSeenTutorial: false,
-        startAppAt: "home"
+        userName:              "Masked anonymous",
+        firstTimeLaunchingApp:  false,
+        userHasSeenTutorial:    false,
+        startAppAt:             "home"
     },
     box: [
 
