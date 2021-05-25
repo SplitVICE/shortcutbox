@@ -1,6 +1,6 @@
 /**
  * ----------------------------------------------------------------------------------------
- * Shortcut Box v1.0.0 - JUST VICE - MIT
+ * Shortcut Box v1.0.0 - SPLIT VICE - MIT
  * ----------------------------------------------------------------------------------------
  * Script that contains the instructions to execute elements inside the file system such as
  * .exe and directories.
