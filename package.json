@@ -28,7 +28,7 @@
   "homepage": "https://github.com/SPLITVICE/shortcutbox#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "electron": "^9.4.3"
+    "electron": "^18.3.7"
   },
   "devDependencies": {
     "mocha": "^8.3.0"
